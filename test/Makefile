@@ -2,10 +2,10 @@
 AUTHOR = hmartzol
 
 #name of compiled file
-NAME = libftjson.a
+NAME = test.exe
 
 #args passed to executable if executed from "make test"
-EXEARGS =
+EXEARGS = test.json
 
 #path to folder containing source files, project header and resulting objects
 SRCDIR = ./src
@@ -13,28 +13,7 @@ INCDIR = ./inc
 OBJDIR = ./OBJ
 
 #name of files to compile without the extension
-ITEMS = \
-		ft_json_check_array_types \
-		ft_json_check_string \
-		ft_json_evaluate_array_size \
-		ft_json_evaluate_object_size \
-		ft_json_evaluate_value_type \
-		ft_json_free \
-		ft_json_new_array \
-		ft_json_new_number \
-		ft_json_new_object \
-		ft_json_new_pair \
-		ft_json_new_string \
-		ft_json_new_value \
-		ft_json_pack_value \
-		ft_json_parse_src \
-		ft_json_print \
-		ft_json_print_clike \
-		ft_json_print_data \
-		ft_json_print_path \
-		ft_json_print_type \
-		ft_json_search_pair_in_object \
-		ft_json_string
+ITEMS = test
 
 #variables for Linux
 ifeq ($(shell uname),Linux)
@@ -42,11 +21,11 @@ ifeq ($(shell uname),Linux)
 #gcc/clang flags
 CFLAGS = -Wall -Wextra -Werror -g -O3
 #path to external includes
-PINC = ../libft/inc
+PINC = ../inc ../../libft/inc
 #path to libs to compile
-CLIB = ../libft
+CLIB = ../ ../../libft
 #exact path of lib files to add in source
-LIB = ../libft/libft.a
+LIB = ../libftjson.a ../../libft/libft.a
 #args passed to gcc depending on the os
 ARGS =
 
@@ -58,11 +37,11 @@ ifeq ($(shell uname),Darwin)
 #gcc/clang flags
 CFLAGS = -Wall -Wextra -Werror -g
 #path to external includes
-PINC = ../libft/inc
+PINC = ../inc ../../libft/inc
 #path to libs to compile
-CLIB = ../libft
+CLIB = ../ ../../libft
 #exact path of lib files to add in source
-LIB = ../libft/libft.a
+LIB = ../libftjson.a ../../libft/libft.a
 #args passed to gcc depending on the os
 ARGS =
 
