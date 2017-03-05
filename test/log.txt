@@ -1,3 +1,4 @@
+New log started
 {
 	"render_options": {
 		"size": [
@@ -356,3 +357,5 @@ root.lights[0].color = (t_json_array*)0x7FABE1D02FE0;
 root.lights[0].color[0] = 1;
 root.lights[0].color[1] = 1;
 root.lights[0].color[2] = 1;
+0b0100000000000000000000000000000000000000000000000000000000000000
+Log ended
