@@ -6,7 +6,7 @@
 /*   By: hmartzol <hmartzol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/17 17:46:30 by hmartzol          #+#    #+#             */
-/*   Updated: 2017/01/27 07:55:37 by hmartzol         ###   ########.fr       */
+/*   Updated: 2018/09/19 15:25:30 by hmartzol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ t_json_value_type	ft_json_evaluate_value_type(const char *src,
 		else
 			return (integer);
 	}
-	if (src[pos] == '"')
+	if (src[pos] == '"' || src[pos] == '\'')
 		return (string);
 	if (src[pos] == '[')
 		return (array);
